@@ -105,7 +105,4 @@ Free to use, modify, and showcase.
 Attribution appreciated but not required.
 
 
----
-
-Let me know when you're ready to do the README for the **“bad UI”** version. That one’ll be fun to tear apart — intentionally.
 
