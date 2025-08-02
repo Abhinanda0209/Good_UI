@@ -79,7 +79,7 @@ project/
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/your-username/space-travel-good-ui.git
+   git clone https://github.com/Abhinanda0209/Good_UI.git
 
 2. Open index.html in any modern browser.
 
