@@ -1,0 +1,228 @@
+.glow-text {
+  display: inline-block;
+  background: linear-gradient(to right, #e0e0e0, #ffffff, #cfcfcf);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: glowShift 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes glowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.animate-bounce-slow {
+  animation: bounceSlow 2.5s ease-in-out infinite;
+}
+
+a:hover,
+button:hover,
+.logo:hover,
+.card:hover,
+.fade-in:hover,
+.navbar a:hover {
+  cursor: url('images/spaceman.cur'), auto;
+}
+
+body.lock-scroll {
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.2s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 0.9;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(20px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* drift diagonally */
+@keyframes driftDiagonal {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
+}
+
+@keyframes driftReset {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100vw, 100vh);
+  }
+}
+
+/* shooting star effect */
+.shooting-star {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(-45deg, white, transparent);
+  opacity: 0.8;
+  z-index: -1;
+  pointer-events: none;
+  animation: shoot 1s ease-out forwards;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(800px, 800px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* spaceship */
+@keyframes flyAcross {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) rotate(5deg);
+    opacity: 0;
+  }
+}
+
+.ship-animate {
+  animation: flyAcross 2.5s ease-in-out forwards;
+}
+
+/* flame trail */
+@keyframes flameTrail {
+  0%, 100% {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(-50%) scaleY(1.4);
+    opacity: 1;
+  }
+}
+
+.animate-flameTrail {
+  animation: flameTrail 0.4s ease-in-out infinite;
+}
+
+/* particle trail */
+.rocket-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #facc15, #fb923c, transparent);
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: particle-fade 1s ease-out forwards;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes particle-fade {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-90px, -20px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* dancing text*/
+#dancing-text span.glow-text {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#dancing-text:hover span.glow-text {
+  animation: wiggle 0.6s infinite alternate;
+}
+
+#dancing-text span.glow-text:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+#dancing-text span.glow-text:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+@keyframes wiggle {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px) rotate(3deg); }
+  100% { transform: translateY(0); }
+}
+
+.destination-card {
+  background: linear-gradient(to right, #111827, #1f2937);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.destination-card:hover {
+  transform: rotateY(8deg) rotateX(4deg) scale(1.04);
+  box-shadow: 0 10px 40px rgba(6, 182, 212, 0.25);
+  border-color: rgba(6, 182, 212, 0.5);
+}
+
+.destination-card:hover h3 {
+  color: #22d3ee;
+}
+
+
+

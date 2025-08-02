@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leisure Space Travel Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Sora:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+</head>
+
+<body class="bg-black text-white font-[Sora] lock-scroll">
+  <div class="stars z-0 fixed top-0 left-0 w-full h-full pointer-events-none"></div>
+
+  <header class="flex items-center justify-between p-6 bg-black bg-opacity-70 fixed top-0 w-full z-50">
+    <h1 class="text-xl font-bold tracking-wider">SPACE TRAVEL CO.</h1>
+    <nav class="space-x-6 hidden md:block">
+      <a id="nav-destinations" href="#destinations"
+        class="pointer-events-none opacity-40 cursor-not-allowed">Destinations</a>
+      <a href="#pricing" class="hover:text-cyan-400">Pricing</a>
+      <a href="#contact" class="hover:text-cyan-400">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero"
+    class="h-screen flex flex-col justify-center items-center text-center px-6 pt-24 bg-cover bg-center relative">
+    <!--style="background-image: url('images/space-bg.jpg');" -->
+    <div class="relative z-10 ">
+      <h2 class="mb-6 text-5xl md:text-6xl font-[Orbitron] font-bold">
+        <span id="dancing-text">
+          <span class="glow-text">B</span><span class="glow-text">o</span><span class="glow-text">o</span><span
+            class="glow-text">k</span><span> </span>
+          <span class="glow-text">Y</span><span class="glow-text">o</span><span class="glow-text">u</span><span
+            class="glow-text">r</span><span> </span>
+          <span class="glow-text">J</span><span class="glow-text">o</span><span class="glow-text">u</span><span
+            class="glow-text">r</span><span class="glow-text">n</span><span class="glow-text">e</span><span
+            class="glow-text">y</span><span> </span>
+          <span class="glow-text">B</span><span class="glow-text">e</span><span class="glow-text">y</span><span
+            class="glow-text">o</span><span class="glow-text">n</span><span class="glow-text">d</span><span> </span>
+          <span class="glow-text">E</span><span class="glow-text">a</span><span class="glow-text">r</span><span
+            class="glow-text">t</span><span class="glow-text">h</span>
+        </span>
+
+      </h2>
+
+
+      <p class="max-w-xl text-gray-300 mb-10 text-lg italic tracking-wide">“The stars are closer than you think.”</p>
+      <p class="text-gray-300 font-[Sora]">Experience space like never before. Explore the Moon, Mars, and beyond with
+        our premium leisure space travel packages.</p>
+      <a href="#destinations" onclick="scrollToDestinations(event)"
+        class="mt-4 inline-block bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-3 rounded-lg transition shadow-lg hover:shadow-cyan-500/50 hover:scale-105 active:scale-95 animate-bounce-slow">
+        Explore Destinations
+      </a>
+    </div>
+  </section>
+
+  <!-- Spaceship -->
+  <div id="ship-flyby"
+    class="fixed top-[60%] left-[-100px] w-[300px] h-auto z-50 pointer-events-none opacity-0 transition-opacity duration-300">
+    <div class="relative w-full h-full">
+      <img src="images/spaceship1.png" alt="Spaceship" class="w-full h-auto">
+      <div
+        class="absolute bottom-1/3 left-1/8 transform -translate-x-1/2 w-8 h-16 bg-orange-800 opacity-600 blur-lg rounded-full z-0 animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-1/3 left-1/8 transform -translate-x-1/2 w-32 h-12 bg-gradient-to-b from-yellow-400 via-orange-600 to-transparent opacity-80 blur-xl rounded-full animate-flameTrail z-0">
+      </div>
+    </div>
+  </div>
+
+  <section id="destinations" class="min-h-screen pt-24 pb-12 px-6 bg-gradient-to-b from-black to-gray-900">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Top Destinations</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div
+        class="destination-card opacity-0 transform translate-y-6 transition-all duration-700 rounded-xl overflow-hidden shadow-lg p-6">
+        <img src="images/moon.jpg" alt="Moon" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-2xl font-semibold mb-2 text-cyan-300">Moon</h3>
+        <p class="text-gray-300">Experience the tranquility of Earth’s closest celestial neighbor. Perfect for weekend
+          space retreats.</p>
+      </div>
+
+      <div
+        class="destination-card opacity-0 transform translate-y-6 transition-all duration-700 rounded-xl overflow-hidden shadow-lg p-6">
+        <img src="images/mars.jpg" alt="Mars" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-2xl font-semibold mb-2 text-cyan-300">Mars</h3>
+        <p class="text-gray-300">Join the first leisure missions to the red planet! Includes guided dune tours and VR
+          survival experiences.</p>
+      </div>
+
+      <div
+        class="destination-card opacity-0 transform translate-y-6 transition-all duration-700 rounded-xl overflow-hidden shadow-lg p-6">
+        <img src="images/europa.jpg" alt="Europa" class="rounded-lg mb-4 w-full h-40 object-cover">
+        <h3 class="text-2xl font-semibold mb-2 text-cyan-300">Europa</h3>
+        <p class="text-gray-300">Explore the icy oceans of Jupiter’s moon in futuristic submersibles. A true alien
+          adventure.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="pricing" class="py-1 px-6 bg-gradient-to-b from-gray-900 to-black">
+    <h2 class="text-4xl font-bold text-center mb-12 tracking-wide">Pricing Plans</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+      <div
+        class="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 text-white shadow-xl hover:scale-[1.03] transition-all duration-300 group">
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2 group-hover:text-cyan-400 transition">Explorer</h3>
+        <p class="text-4xl font-extrabold mb-4">€5,000</p>
+        <ul class="space-y-2 text-gray-300 text-sm leading-relaxed mb-6">
+          <li>✧ 3-day Moon stay</li>
+          <li>✧ Orbital flight</li>
+          <li>✧ Basic training included</li>
+        </ul>
+        <button class="w-full bg-cyan-400 text-black font-bold py-2 rounded-lg hover:bg-cyan-300 transition">Book
+          Now</button>
+      </div>
+
+      <div
+        class="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 text-white shadow-xl hover:scale-[1.03] transition-all duration-300 group">
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2 group-hover:text-cyan-400 transition">Adventurer</h3>
+        <p class="text-4xl font-extrabold mb-4">€10,000</p>
+        <ul class="space-y-2 text-gray-300 text-sm leading-relaxed mb-6">
+          <li>✧ 7-day Mars trip</li>
+          <li>✧ Guided rover tours</li>
+          <li>✧ Premium space suit</li>
+        </ul>
+        <button class="w-full bg-cyan-400 text-black font-bold py-2 rounded-lg hover:bg-cyan-300 transition">Book
+          Now</button>
+      </div>
+
+      <div
+        class="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 text-white shadow-xl hover:scale-[1.03] transition-all duration-300 group">
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2 group-hover:text-cyan-400 transition">Galactic VIP</h3>
+        <p class="text-4xl font-extrabold mb-4">€50,000</p>
+        <ul class="space-y-2 text-gray-300 text-sm leading-relaxed mb-6">
+          <li>✧ Custom itinerary</li>
+          <li>✧ Europa + Mars + Moon tour</li>
+          <li>✧ Zero-gravity luxury suite</li>
+        </ul>
+        <button class="w-full bg-cyan-400 text-black font-bold py-2 rounded-lg hover:bg-cyan-300 transition">Book
+          Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-black">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose Us?</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="fade-in">
+        <div class="text-5xl mb-4">🛰️</div>
+        <h3 class="text-xl font-semibold mb-2">Cutting-Edge Fleet</h3>
+        <p class="text-gray-300">Travel in style with our top-tier, AI-assisted spacecrafts.</p>
+      </div>
+      <div class="fade-in">
+        <div class="text-5xl mb-4">🧑‍🚀</div>
+        <h3 class="text-xl font-semibold mb-2">Expert Guides</h3>
+        <p class="text-gray-300">Trained astronauts and historians on every mission.</p>
+      </div>
+      <div class="fade-in">
+        <div class="text-5xl mb-4">🌌</div>
+        <h3 class="text-xl font-semibold mb-2">Unreal Experiences</h3>
+        <p class="text-gray-300">From weightless concerts to galaxy-view dining.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="py-12 text-center bg-black text-gray-400">
+    <p>© 2025 Leisure Space Travel Co. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+  <audio id="rocket-sound" src="sounds/rocket-blast.mp3" preload="auto"></audio>
+  <audio id="bg-audio" src="sounds/background-space.mp3" preload="auto" loop></audio>
+</body>
+
+</html>
